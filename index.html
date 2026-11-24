@@ -17,12 +17,12 @@
 *{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;background:#0a0604;color:var(--ink);overflow:hidden;font:16px/1.5 "M PLUS 1p","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
 button{font:inherit;color:inherit;cursor:pointer}
-#cv{position:fixed;inset:0;width:100%;height:100%;display:block}
-.screen{position:fixed;inset:0;display:none;flex-direction:column;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+#cv{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;display:block}
+.screen{position:fixed;top:0;right:0;bottom:0;left:0;display:none;flex-direction:column;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
 .screen.on{display:flex}
 .logo{font-family:"Dela Gothic One",sans-serif;text-align:center;line-height:1.05;margin:18px 0 4px}
 .logo small{display:block;font-size:15px;color:#ffe9b0;letter-spacing:.1em;margin-bottom:6px}
-.logo b{display:block;font-weight:400;font-size:clamp(34px,10vw,52px);background:linear-gradient(#fff3b0,#ffcd3c 45%,#e07a10);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #4a1e05) drop-shadow(0 0 14px rgba(255,140,20,.45))}
+.logo b{display:block;font-weight:400;font-size:40px;font-size:clamp(34px,10vw,52px);background:linear-gradient(#fff3b0,#ffcd3c 45%,#e07a10);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #4a1e05) drop-shadow(0 0 14px rgba(255,140,20,.45))}
 .lead{text-align:center;font-size:14px;color:#f3d9b0;margin:6px 16px 10px}
 #list{flex:1;overflow-y:auto;padding:4px 14px 24px;-webkit-overflow-scrolling:touch}
 .grp{font-size:13px;color:#ffcd3c;margin:14px 4px 6px;font-weight:800}
@@ -47,18 +47,18 @@ button{font:inherit;color:inherit;cursor:pointer}
 #lamps i.now{border-color:#fff}
 #qcard{margin:10px 12px 0;padding:12px 14px 12px;border-radius:16px;background:rgba(12,7,3,.82);border:2px solid #8a5a2c;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 #qno{font-family:"Dela Gothic One";color:var(--gold);font-size:15px}
-#qtext{font-size:clamp(17px,4.8vw,21px);font-weight:800;line-height:1.45;margin-top:2px;text-wrap:pretty}
+#qtext{font-size:18px;font-size:clamp(17px,4.8vw,21px);font-weight:800;line-height:1.45;margin-top:2px;text-wrap:pretty}
 .timer{height:8px;border-radius:4px;background:#2a1a0e;margin-top:10px;overflow:hidden}
 .timer i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff4a12,#ffcd3c);transform-origin:left}
 #choices{position:absolute;left:0;right:0;bottom:calc(27vh + env(safe-area-inset-bottom));display:flex;gap:10px;padding:0 10px}
-.ch{flex:1;border:0;padding:14px 10px 16px;border-radius:12px;background:linear-gradient(#a7672f,#7a4720);box-shadow:inset 0 2px 0 rgba(255,220,170,.45),inset 0 -4px 0 rgba(0,0,0,.3),0 6px 0 #2d1606,0 10px 20px rgba(0,0,0,.5);font-weight:800;font-size:clamp(15px,4.3vw,18px);line-height:1.35;min-height:88px;display:flex;flex-direction:column;align-items:center;gap:4px;text-shadow:0 1px 0 #3a1a05}
+.ch{flex:1;border:0;padding:14px 10px 16px;border-radius:12px;background:linear-gradient(#a7672f,#7a4720);box-shadow:inset 0 2px 0 rgba(255,220,170,.45),inset 0 -4px 0 rgba(0,0,0,.3),0 6px 0 #2d1606,0 10px 20px rgba(0,0,0,.5);font-weight:800;font-size:16px;font-size:clamp(15px,4.3vw,18px);line-height:1.35;min-height:88px;display:flex;flex-direction:column;align-items:center;gap:4px;text-shadow:0 1px 0 #3a1a05}
 .ch .arw{font-family:"Dela Gothic One";font-size:13px;color:#ffe28a}
 .ch:active{transform:translateY(3px)}
 .ch:disabled{opacity:.55}
 .ch.pick{outline:3px solid #fff;opacity:1}
 .ch.right{background:linear-gradient(#ffd75a,#e59a12);color:#3a1a03;text-shadow:none;opacity:1}
 .ch.wrong{background:linear-gradient(#6a2a20,#3e140c);opacity:1}
-#fx{position:absolute;left:0;right:0;top:40%;text-align:center;font-family:"Dela Gothic One";font-size:clamp(40px,14vw,72px);pointer-events:none;opacity:0;transform:scale(.6);transition:opacity .2s,transform .25s}
+#fx{position:absolute;left:0;right:0;top:40%;text-align:center;font-family:"Dela Gothic One";font-size:52px;font-size:clamp(40px,14vw,72px);pointer-events:none;opacity:0;transform:scale(.6);transition:opacity .2s,transform .25s}
 #fx.on{opacity:1;transform:scale(1)}
 #expl{position:absolute;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:14px 16px;border-radius:16px;background:rgba(18,10,4,.94);border:2px solid var(--gold);display:none}
 #expl.on{display:flex;flex-direction:column}
@@ -79,7 +79,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* result */
 #result{justify-content:center;padding-left:16px;padding-right:16px}
 .rbox{max-width:520px;width:100%;margin:0 auto;max-height:92vh;overflow-y:auto;padding:18px;border-radius:18px;background:rgba(14,8,3,.9);border:2px solid #8a5a2c}
-.rbox h2{font-family:"Dela Gothic One";font-weight:400;text-align:center;font-size:clamp(34px,11vw,48px);margin:4px 0 6px;line-height:1.05}
+.rbox h2{font-family:"Dela Gothic One";font-weight:400;text-align:center;font-size:40px;font-size:clamp(34px,11vw,48px);margin:4px 0 6px;line-height:1.05}
 .rbox h2.win{color:var(--gold);text-shadow:0 0 18px rgba(255,180,40,.6)}
 .rbox h2.lose{color:#ff6a3a}
 .rbox .sub2{text-align:center;color:#f3d9b0;margin:0 0 12px;font-size:14px}
@@ -111,6 +111,11 @@ ruby{ruby-position:over}
 .glcount{font-size:12px;color:#c9a679;margin:8px 2px 0}
 #gllist .gc{background:rgba(46,27,13,.95)}
 .gc .tag{display:block;font-size:11px;color:#c9a679;margin-top:6px}
+@supports not (inset:0){
+.course>*+*{margin-left:12px}.hud>*+*{margin-left:8px}#lamps>*+*{margin-left:5px}
+#choices>*+*{margin-left:10px}.ch>*+*{margin-top:4px}
+.set>*{margin:3px}.glchips>*+*{margin-left:6px}
+}
 :focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){#fx{transition:none}}
 </style>
